@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+24-09-09
+-------------
+Avslutade 7050 och började på 7060
+
 24-09-03
 -------------
 Gjort en hög med uppgifter på 7045 och 7050.
