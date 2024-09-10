@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+24-09-10
+-------------
+Avslutade 7060 och började på 7061
+ 
 24-09-09
 -------------
 Avslutade 7050 och började på 7060
