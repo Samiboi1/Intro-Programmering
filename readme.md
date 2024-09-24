@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+24-09-24
+-------------
+Klarat 7061 och börjat på 7070
+
 24-09-23
 -------------
 Bara gjort uppgift ett och två på 7061
