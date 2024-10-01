@@ -8,6 +8,6 @@ while svar != 42:
     svar = int(input("Talet är för stort. "))
     försök = försök + 1
 if svar == 42:
-  print("Rätt", försök, "försök")
+  print("Rätt efter", försök, "försök")
 else:
   print("God damn du är skit")

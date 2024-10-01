@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+24-10-01
+------------
+7070 snart klar
+
 24-09-24
 -------------
 Klarat 7061 och börjat på 7070

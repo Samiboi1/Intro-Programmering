@@ -5,7 +5,13 @@ while svar == "j":
   print(tal)
   tal2 = (random.randrange(1, 7))
   print(tal2)
-  if  tal == tal2:
+  if tal == 6 and tal2 == 6:
+    print("Du fick sex-vinst!!!!!!!!")
+  elif tal == tal2 + 1:
+    print("Du fick steg-vinst")
+  elif tal2 == tal + 1:
+    print("Du fick steg-vinst")
+  elif tal == tal2:
     print("Vinst")
   else:
     print("Förlust")
