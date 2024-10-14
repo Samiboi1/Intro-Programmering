@@ -1,8 +1,12 @@
 Sam Hartelius Loggbok
 ==================
 
+24-10-14
+-------------
+Fortfarande 7070 snart klar
+
 24-10-01
-------------
+-------------
 7070 snart klar
 
 24-09-24

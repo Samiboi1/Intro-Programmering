@@ -13,8 +13,6 @@ while svar == "j":
     print("Vinst")
   elif tal == tal2:
     print("mini-vinst")
-  elif tal2 == tal:
-    print("mini-vinst")
   elif tal3 == tal:
     print("mini-vinst")
   elif tal3 == tal2:
