@@ -3,7 +3,7 @@ Sam Hartelius Loggbok
 
 24-10-22
 -------------
-Klar med 7070 och 7073 
+Klar med 7070 och 7073
 
 24-10-21
 -------------
