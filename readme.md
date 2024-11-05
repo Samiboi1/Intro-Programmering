@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+24-11-05
+-------------
+Klar med 7095 o 7096, börjat med 7100
+
 24-10-22
 -------------
 Klar med 7070 och 7073
