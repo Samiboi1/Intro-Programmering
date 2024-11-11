@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+24-11-11
+-------------
+7100 är väldigt jobbig
+
 24-11-05
 -------------
 Klar med 7095 o 7096, börjat med 7100
