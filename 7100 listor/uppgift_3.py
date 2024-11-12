@@ -8,5 +8,3 @@ for bokstav in ord:
   elif bokstav in vok:
     svar += bokstav
 print(svar)
-
-# Skriven av Kevin Yeh

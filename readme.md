@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+24-11-12
+-------------
+7100 är bara jobbig
+
 24-11-11
 -------------
 7100 är väldigt jobbig
