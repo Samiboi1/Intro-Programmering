@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+24-11-18
+-------------
+7100 är fortfarande jobbig
+
 24-11-12
 -------------
 7100 är bara jobbig
