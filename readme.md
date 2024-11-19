@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+24-11-19
+-------------
+Min FÖDELSEDAG, 7100 brydde sig inte alls däremot
+
 24-11-18
 -------------
 7100 är fortfarande jobbig
