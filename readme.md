@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+24-11-25
+-------------
+7100...
+
 24-11-19
 -------------
 Min FÖDELSEDAG, 7100 brydde sig inte alls däremot
