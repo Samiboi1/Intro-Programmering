@@ -5,7 +5,7 @@ svar = ""
 for bokstav in ord:
   nytt_index = bok.index(bokstav)
   if nytt_index + step > 28:
-    bokstav = bok[0 + step - (28 - nytt_index) - 1]
+    nytt_index = 0 + step - (28 - nytt_index) - 1
   else:
     nytt_index = nytt_index + step
   svar += bok[nytt_index]
