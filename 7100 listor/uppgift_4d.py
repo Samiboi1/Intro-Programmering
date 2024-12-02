@@ -1,6 +1,6 @@
 bok = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 ord = input("Skriv ett ord: ")
-step = int(input("Hur många steg ska vi hoppa för att kryptera?: "))
+step = int(input("Hur många steg ska vi hoppa för att dekryptera?: "))
 svar = ""
 for bokstav in ord:
   if bokstav == "_":

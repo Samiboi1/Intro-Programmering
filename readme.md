@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+24-12-02
+-------------
+7100, 5 klar, börjat på 6
+
 24-11-26
 -------------
 7100, men 4c o d är klara nu
