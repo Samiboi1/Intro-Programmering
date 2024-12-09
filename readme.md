@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+24-12-09
+-------------
+Lite smått sjuk gjorde att produktiviteten sjönk i botten
+
 24-12-02
 -------------
 7100, 5 klar, börjat på 6
