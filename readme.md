@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+24-12-16
+-------------
+En extremt produktiv sista programmerings lektion där jag inte gjorde någonting överhuvudtaget
+
 24-12-09
 -------------
 Lite smått sjuk gjorde att produktiviteten sjönk i botten
