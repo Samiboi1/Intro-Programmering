@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-01-13
+-------------
+Fösta lektionen 2025, ändå relativt produktiv
+
 24-12-16
 -------------
 En extremt produktiv sista programmerings lektion där jag inte gjorde någonting överhuvudtaget
