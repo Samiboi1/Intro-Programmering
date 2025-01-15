@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-01-14
+-------------
+Gick ok, orken gick i botten på slutet
+
 25-01-13
 -------------
 Fösta lektionen 2025, ändå relativt produktiv
