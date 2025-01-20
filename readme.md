@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-01-20
+-------------
+Uppgift 6 är klar, 7 är Ceasarshiffer. Igen
+
 25-01-14
 -------------
 Gick ok, orken gick i botten på slutet
