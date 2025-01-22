@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-01-21
+-------------
+Ceasarshiffer gick lättare än förväntat, nu 7110
+
 25-01-20
 -------------
 Uppgift 6 är klar, 7 är Ceasarshiffer. Igen
