@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-01-27
+-------------
+Jag läste, om allt och alla
+
 25-01-21
 -------------
 Ceasarshiffer gick lättare än förväntat, nu 7110
