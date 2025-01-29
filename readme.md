@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-01-28
+-------------
+Bara läste och ärde om listor och allt inom det
+
 25-01-27
 -------------
 Jag läste, om allt och alla
