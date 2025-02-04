@@ -1,9 +1,13 @@
 Sam Hartelius Loggbok
 ==================
 
+25-02-03
+-------------
+Prov 9, done
+
 25-01-28
 -------------
-Bara läste och ärde om listor och allt inom det
+Bara läste och lärde om listor och allt inom det
 
 25-01-27
 -------------
