@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-02-17
+-------------
+Startade Py Game, bollen blev galen snabb
+
 25-02-04
 -------------
 Prov 10, done
