@@ -1,9 +1,13 @@
 Sam Hartelius Loggbok
 ==================
 
+25-02-18
+-------------
+Nästan klar med PyGame, nu chillar vi men en kvart kvar
+
 25-02-17
 -------------
-Startade Py Game, bollen blev galen snabb
+Startade PyGame, bollen blev galen snabb
 
 25-02-04
 -------------

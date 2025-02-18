@@ -18,7 +18,7 @@ pygame.init()
 size = (700, 500)
 screen = pygame.display.set_mode(size)
  
-pygame.display.set_caption("My Game")
+pygame.display.set_caption("Galen boll")
 
 # Add visual elements to the game
 circle_x = 50
@@ -69,6 +69,6 @@ while not done:
     pygame.display.flip()
  
     # --- Limit to 60 frames per second
-    clock.tick(60)
+    clock.tick(120)
  
 # Close the window and quit.
