@@ -134,7 +134,7 @@ while not done:
         if turtle[1] > 800:
                 turtles.remove(turtle)
         if collides(snake_x, snake_y, snake_radius, 
-                turtle[0], turtle[1], turtle):
+                turtle[0], turtle[1], turtle_radius):
             turtles.remove(turtle)
             print("Ouch!")
         
