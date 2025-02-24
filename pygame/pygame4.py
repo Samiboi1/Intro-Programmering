@@ -28,19 +28,27 @@ pygame.init()
 size = (600, 800)
 screen = pygame.display.set_mode(size)
  
-pygame.display.set_caption("My Game")
+pygame.display.set_caption("snakegame123456789")
 
 # Add visual elements to the game
-snake_image = pygame.image.load("img/snake.png")
+snake_image = pygame.image.load("snake.png")
 snake_x = 50
 snake_y = 700
 snake_last_direction = "right"
 snake_radius = (snake_image.get_width() + snake_image.get_height()) / 4
 
-plum_image = pygame.image.load("img/plum.png")
+plum_image = pygame.image.load("plum.png")
 plums = []
 plum_radius = (plum_image.get_width() + plum_image.get_height()) / 4
- 
+
+cherry_image = pygame.image.load("cherries.png")
+cherries = []
+cherry_radius = (cherry_image.get_width() + cherry_image.get_height()) / 4
+
+turle_image = pygame.image.load("turtle2.png")
+turtles = []
+turtle_radius = (turle_image.get_width() + turle_image.get_height()) / 4
+
 # Loop until the user clicks the close button.
 done = False
  
@@ -57,13 +65,28 @@ while not done:
     # --- Game logic should go here
     keys = pygame.key.get_pressed()
     if keys[pygame.K_LEFT]:
-        snake_x -= 5
-        if (snake_last_direction == "right"):
-            snake_image = pygame.transform.flip(snake_image, True, False)
-            snake_last_direction = "left"
+      snake_x -= 5
+      if (snake_last_direction == "right"):
+        snake_image = pygame.transform.flip(snake_image, True, False)
+        snake_last_direction = "left"
+    if keys[pygame.K_RIGHT]:
+      snake_x += 5
+      if (snake_last_direction == "left"):
+        snake_image = pygame.transform.flip(snake_image, True, False)
+        snake_last_direction = "right"
+    if keys[pygame.K_UP]:
+      snake_y -= 5
+    if keys[pygame.K_DOWN]:
+      snake_y += 5
         # Wrap the snake around the screen.
-        if snake_x < 0:
-            snake_x = 600
+    if snake_x < 0:
+      snake_x = 600
+    if snake_x > 600:
+      snake_x = 0
+    if snake_y < 0:
+      snake_y = 800
+    if snake_y > 800:
+      snake_y = 0
 
     # plums
     # Chance of having a new plum.
@@ -71,6 +94,14 @@ while not done:
         plum_x = random.randint(0, 600)
         # Add plum coodinates to the list.
         plums.append([plum_x, 0, 0]) # x, y, speed
+
+    if (random.randint(0, 100) < 2):
+        cherry_x = random.randint(0, 600)
+        cherries.append([cherry_x, 0, 0])
+
+    if (random.randint(0, 100) < 2):
+        turtle_x = random.randint(0, 600)
+        turtles.append([turtle_x, 0, 0])
     
     # move plums
     for plum in plums:
@@ -86,6 +117,26 @@ while not done:
                     plum[0], plum[1], plum_radius):
             plums.remove(plum)
             print("Yum!")
+
+    for cherry in cherries:
+        cherry[1] += cherry[2]
+        cherry[2] += 0.2
+        if cherry[1] > 800:
+            cherries.remove(cherry)
+        if collides(snake_x, snake_y, snake_radius, 
+                    cherry[0], cherry[1], cherry_radius):
+            cherries.remove(cherry)
+            print("Yum!")
+
+    for turtle in turtles:
+        turtle[1] += turtle[2]
+        turtle[2] += 0.2
+        if turtle[1] > 800:
+                turtles.remove(turtle)
+        if collides(snake_x, snake_y, snake_radius, 
+                turtle[0], turtle[1], turtle):
+            turtles.remove(turtle)
+            print("Ouch!")
         
 
         
@@ -103,6 +154,10 @@ while not done:
     screen.blit(snake_image, [snake_x, snake_y])
     for plum in plums:
         screen.blit(plum_image, [plum[0], plum[1]])
+    for cherry in cherries:
+        screen.blit(cherry_image, [cherry[0], cherry[1]])
+    for turtle in turtles:
+        screen.blit(turle_image, [turtle[0], turtle[1]])
  
     # --- Go ahead and update the screen with what we've drawn.
     pygame.display.flip()

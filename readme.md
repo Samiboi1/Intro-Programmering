@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-02-24
+-------------
+Sista sakerna att städa upp på sista uppgiften
+
 25-02-18
 -------------
 Nästan klar med PyGame, nu chillar vi men en kvart kvar
