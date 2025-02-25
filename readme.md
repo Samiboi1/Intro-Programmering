@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-02-25
+-------------
+Sista uppgiften klar, nu chillar vi
+
 25-02-24
 -------------
 Sista sakerna att städa upp på sista uppgiften
