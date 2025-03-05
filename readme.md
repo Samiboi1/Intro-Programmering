@@ -1,6 +1,14 @@
 Sam Hartelius Loggbok
 ==================
 
+25-03-04
+-------------
+Fortsatt på mitt egna projekt
+
+25-03-03
+-------------
+Börjat på mitt egna projekt
+
 25-02-25
 -------------
 Sista uppgiften klar, nu chillar vi
