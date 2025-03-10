@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-03-10
+-------------
+Börjat på uppgift 5
+
 25-03-04
 -------------
 Fortsatt på mitt egna projekt
