@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-03-11
+-------------
+Nästan klar med uppgift 5
+
 25-03-10
 -------------
 Börjat på uppgift 5

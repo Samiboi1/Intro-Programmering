@@ -40,6 +40,7 @@ bird_last_direction = "right"
 # Green but red when there is a collision.
 box = pygame.Rect(100, 100, 200, 200)
 box_color = GREEN
+box2 = pygame.Rect(400, 350, 200, 200)
 
 is_running = True
 # Game time
@@ -68,9 +69,26 @@ while is_running:
     if keys[pygame.K_DOWN]:
       bird_y += 5
     # ... Write code here ....
+    if bird_x < 0:
+      bird_x = 0
+    if bird_x > 750:
+      bird_x = 750
+    if bird_y < 0:
+      bird_y = 0
+    if bird_y > 550:
+      bird_y = 550
+    
+    # ... Collision with box ...
+    if box_color == RED:
+      is_running = False
+
 
     # Check for collision between the bird and the box.
     if box.colliderect(bird_image.get_rect(topleft=(bird_x, bird_y))):
+        box_color = RED
+    else:
+        box_color = GREEN
+    if box2.colliderect(bird_image.get_rect(topleft=(bird_x, bird_y))):
         box_color = RED
     else:
         box_color = GREEN
@@ -80,6 +98,7 @@ while is_running:
     # --- Drawing code should go here
     screen.blit(bird_image, (bird_x, bird_y))
     pygame.draw.rect(screen, box_color, box)
+    pygame.draw.rect(screen, box_color, box2)
     pygame.display.update()  # or pygame.display.flip()
     # --- Increase game time
     clock.tick(60)  # 60 frames per second
