@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-03-18
+-------------
+Jag har inte lärt mig något idag, jag bara satt och tänkte hur man gör uppgift 6, sedan gav jag upp och bara stängde ner
+
 25-03-17
 -------------
 Letade upp problemet med uppgift 5 i pygame uppgifterna, fixade problemet och började på uppgift 6
