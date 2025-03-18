@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-03-17
+-------------
+Letade upp problemet med uppgift 5 i pygame uppgifterna, fixade problemet och började på uppgift 6
+
 25-03-11
 -------------
 Nästan klar med uppgift 5
