@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-03-24
+-------------
+Nu har jag börjat med uppgift 6, lärt mig att man kan ersätta player_x med player['x'], ganska bra faktiskt
+
 25-03-18
 -------------
 Jag har inte lärt mig något idag, jag bara satt och tänkte hur man gör uppgift 6, sedan gav jag upp och bara stängde ner

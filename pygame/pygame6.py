@@ -51,8 +51,11 @@ walls = []
 
 # Create the player
 player = {}
+player['x'] = 0
+player['y'] = 0
 player['image'] = player_image
 player['speed'] = 4
+player_last_direction = "right"
 
 # Read the maze from the file.
 
@@ -104,6 +107,24 @@ while is_running:
         player['x'] -= player['speed']
         if get_one_colliding_object(player, walls):
             player['x'] += player['speed']
+        if (player_last_direction == "right"):
+            player_image = pygame.transform.flip(player_image, True, False)
+            player_last_direction = "left"
+    if keys[pygame.K_RIGHT]:
+        player['x'] += player['speed']
+        if get_one_colliding_object(player, walls):
+            player['x'] -= player['speed']
+        if (player_last_direction == "left"):
+            player_image = pygame.transform.flip(player_image, True, False)
+            player_last_direction = "right"
+    if keys[pygame.K_UP]:
+        player['y'] -= player['speed']
+        if get_one_colliding_object(player, walls):
+            player['y'] += player['speed']
+    if keys[pygame.K_DOWN]:
+        player['y'] += player['speed']
+        if get_one_colliding_object(player, walls):
+            player['y'] -= player['speed']
     
     else:
         # snap player to grid
@@ -111,13 +132,14 @@ while is_running:
         player['y'] = round(player['y'] / wall_size) * wall_size
 
     # --- Screen-clearing code goes here
-    # fill widh sand
+    # fill with sand
     for y in range(0, size[1], wall_size):
         for x in range(0, size[0], wall_size):
             screen.blit(sand_image, (x, y))
     # --- Drawing code should go here
     for wall in walls:
         screen.blit(wall_image, (wall['x'], wall['y']))
+    screen.blit(player_image, (player['x'], player['y']))
 
     pygame.display.update()  # or pygame.display.flip()
     # --- Increase game time
