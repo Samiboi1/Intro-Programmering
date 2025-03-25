@@ -21,6 +21,7 @@ Extra tasks:
 '''
 import pygame
 
+score = 0
 
 # --- Define helper functions
 def get_one_colliding_object(object_1, objects):
@@ -41,6 +42,8 @@ pygame.init()
 # load graphics
 sand_image = pygame.image.load("floor_sand_stone_0.png")
 wall_image = pygame.image.load("brick_brown_0.png")
+crystal_image = pygame.image.load("crystal_wall_lightmagenta.png")
+enemy_image = pygame.image.load("ogre_old.png")
 #door "img/open_door.png"
 player_image = pygame.image.load("deep_elf_knight_old.png")
 
@@ -48,6 +51,16 @@ player_image = pygame.image.load("deep_elf_knight_old.png")
 
 wall_size = wall_image.get_width()
 walls = []
+
+cry_size = crystal_image.get_width()
+cry = []
+
+enemy = {}
+enemy['x'] = 30
+enemy['y'] = 32
+enemy['image'] = enemy_image
+enemy['speed'] = 2
+enemy_last_direction = "right"
 
 # Create the player
 player = {}
@@ -77,6 +90,12 @@ while len(line) > 1:
         elif char == 'e':
             player['x'] = x
             player['y'] = y
+        elif char == 'p':
+            crystal = {}
+            crystal['x'] = x
+            crystal['y'] = y
+            crystal['image'] = crystal_image
+            cry.append(crystal)
 
         x += wall_size
     x = 0
@@ -107,24 +126,32 @@ while is_running:
         player['x'] -= player['speed']
         if get_one_colliding_object(player, walls):
             player['x'] += player['speed']
-        if (player_last_direction == "right"):
-            player_image = pygame.transform.flip(player_image, True, False)
-            player_last_direction = "left"
-    if keys[pygame.K_RIGHT]:
-        player['x'] += player['speed']
-        if get_one_colliding_object(player, walls):
-            player['x'] -= player['speed']
+        if get_one_colliding_object(player, enemy):
+            is_running = False
         if (player_last_direction == "left"):
             player_image = pygame.transform.flip(player_image, True, False)
             player_last_direction = "right"
-    if keys[pygame.K_UP]:
+    elif keys[pygame.K_RIGHT]:
+        player['x'] += player['speed']
+        if get_one_colliding_object(player, walls):
+            player['x'] -= player['speed']
+        if get_one_colliding_object(player, enemy):
+            is_running = False
+        if (player_last_direction == "right"):
+            player_image = pygame.transform.flip(player_image, True, False)
+            player_last_direction = "left"
+    elif keys[pygame.K_UP]:
         player['y'] -= player['speed']
         if get_one_colliding_object(player, walls):
             player['y'] += player['speed']
-    if keys[pygame.K_DOWN]:
+        if get_one_colliding_object(player, enemy):
+            is_running = False
+    elif keys[pygame.K_DOWN]:
         player['y'] += player['speed']
         if get_one_colliding_object(player, walls):
             player['y'] -= player['speed']
+        if get_one_colliding_object(player, enemy):
+            is_running = False
     
     else:
         # snap player to grid
@@ -139,7 +166,13 @@ while is_running:
     # --- Drawing code should go here
     for wall in walls:
         screen.blit(wall_image, (wall['x'], wall['y']))
+
+    for crystal in cry:
+        screen.blit(crystal_image, (crystal['x'], crystal['y']))
+    
     screen.blit(player_image, (player['x'], player['y']))
+
+    screen.blit(enemy_image, (enemy['x'], enemy['y']))
 
     pygame.display.update()  # or pygame.display.flip()
     # --- Increase game time

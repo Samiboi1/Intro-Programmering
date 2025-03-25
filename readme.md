@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-03-25
+-------------
+Kanske snart klar med uppgift 6, idag har jag väl främst lärt mig att if get_one_colliding_object() behöver två argument för att fungera, och att [] och {} listor kräver två olika namn
+
 25-03-24
 -------------
 Nu har jag börjat med uppgift 6, lärt mig att man kan ersätta player_x med player['x'], ganska bra faktiskt
