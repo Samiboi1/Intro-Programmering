@@ -21,8 +21,6 @@ Extra tasks:
 '''
 import pygame
 
-score = 0
-
 # --- Define helper functions
 def get_one_colliding_object(object_1, objects):
     '''Returns the first object in the list of objects
@@ -44,7 +42,7 @@ sand_image = pygame.image.load("floor_sand_stone_0.png")
 wall_image = pygame.image.load("brick_brown_0.png")
 crystal_image = pygame.image.load("crystal_wall_lightmagenta.png")
 enemy_image = pygame.image.load("ogre_old.png")
-#door "img/open_door.png"
+door_image = pygame.image.load("open_door.png")
 player_image = pygame.image.load("deep_elf_knight_old.png")
 
 # Add visual elements to the game
@@ -55,9 +53,12 @@ walls = []
 cry_size = crystal_image.get_width()
 cry = []
 
+door_size = door_image.get_width()
+doors = []
+
 enemy = {}
-enemy['x'] = 30
-enemy['y'] = 32
+enemy['x'] = 0
+enemy['y'] = 0
 enemy['image'] = enemy_image
 enemy['speed'] = 2
 enemy_last_direction = "right"
@@ -70,6 +71,13 @@ player['image'] = player_image
 player['speed'] = 4
 player_last_direction = "right"
 
+WHITE = (255, 255, 255)
+score = 0
+font = pygame.font.Font(None, 32)
+text = font.render('score: 0', True, WHITE)
+textRect = text.get_rect()
+textRect.topleft = (75, 5)
+
 # Read the maze from the file.
 
 file = open('maze.txt', 'r')
@@ -81,7 +89,7 @@ y = 0
 while len(line) > 1:
     maze_height += 1
     for char in line:
-        if char == 'x' or char == 'd':
+        if char == 'x':
             wall = {}
             wall['x'] = x
             wall['y'] = y
@@ -96,6 +104,15 @@ while len(line) > 1:
             crystal['y'] = y
             crystal['image'] = crystal_image
             cry.append(crystal)
+        elif char == 't':
+            enemy['x'] = x
+            enemy['y'] = y
+        elif char == 'd':
+            door = {}
+            door['x'] = x
+            door['y'] = y
+            door['image'] = door_image
+            doors.append(door)
 
         x += wall_size
     x = 0
@@ -126,8 +143,6 @@ while is_running:
         player['x'] -= player['speed']
         if get_one_colliding_object(player, walls):
             player['x'] += player['speed']
-        if get_one_colliding_object(player, enemy):
-            is_running = False
         if (player_last_direction == "left"):
             player_image = pygame.transform.flip(player_image, True, False)
             player_last_direction = "right"
@@ -135,8 +150,6 @@ while is_running:
         player['x'] += player['speed']
         if get_one_colliding_object(player, walls):
             player['x'] -= player['speed']
-        if get_one_colliding_object(player, enemy):
-            is_running = False
         if (player_last_direction == "right"):
             player_image = pygame.transform.flip(player_image, True, False)
             player_last_direction = "left"
@@ -144,19 +157,17 @@ while is_running:
         player['y'] -= player['speed']
         if get_one_colliding_object(player, walls):
             player['y'] += player['speed']
-        if get_one_colliding_object(player, enemy):
-            is_running = False
     elif keys[pygame.K_DOWN]:
         player['y'] += player['speed']
         if get_one_colliding_object(player, walls):
             player['y'] -= player['speed']
-        if get_one_colliding_object(player, enemy):
-            is_running = False
     
     else:
         # snap player to grid
         player['x'] = round(player['x'] / wall_size) * wall_size
         player['y'] = round(player['y'] / wall_size) * wall_size
+        enemy['x'] = round(enemy['x'] / wall_size) * wall_size
+        enemy['y'] = round(enemy['y'] / wall_size) * wall_size
 
     # --- Screen-clearing code goes here
     # fill with sand
@@ -170,9 +181,14 @@ while is_running:
     for crystal in cry:
         screen.blit(crystal_image, (crystal['x'], crystal['y']))
     
+    for door in doors:
+        screen.blit(door_image, (door['x'], door['y']))
+    
     screen.blit(player_image, (player['x'], player['y']))
 
     screen.blit(enemy_image, (enemy['x'], enemy['y']))
+
+    screen.blit(text, textRect)
 
     pygame.display.update()  # or pygame.display.flip()
     # --- Increase game time

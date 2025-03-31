@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-03-31
+-------------
+Inte alls snart klar med uppgift 6, har egentligen inte lärt mig jätte mycket idag, mycket bara återanvändning av äldre kod som nu har en betydelse i denna uppgift, till exempel hur man visar en scoreboard
+
 25-03-25
 -------------
 Kanske snart klar med uppgift 6, idag har jag väl främst lärt mig att if get_one_colliding_object() behöver två argument för att fungera, och att [] och {} listor kräver två olika namn
