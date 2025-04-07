@@ -143,6 +143,10 @@ while is_running:
         player['x'] -= player['speed']
         if get_one_colliding_object(player, walls):
             player['x'] += player['speed']
+        if get_one_colliding_object(player, cry):
+            score = score + 1
+            cry.remove(crystal)
+            text = font.render('score: ' + str(score), True, WHITE)
         if (player_last_direction == "left"):
             player_image = pygame.transform.flip(player_image, True, False)
             player_last_direction = "right"
@@ -150,6 +154,10 @@ while is_running:
         player['x'] += player['speed']
         if get_one_colliding_object(player, walls):
             player['x'] -= player['speed']
+        if get_one_colliding_object(player, cry):
+            score = score + 1
+            cry.remove(crystal)
+            text = font.render('score: ' + str(score), True, WHITE)
         if (player_last_direction == "right"):
             player_image = pygame.transform.flip(player_image, True, False)
             player_last_direction = "left"
@@ -157,10 +165,18 @@ while is_running:
         player['y'] -= player['speed']
         if get_one_colliding_object(player, walls):
             player['y'] += player['speed']
+        if get_one_colliding_object(player, cry):
+            score = score + 1
+            cry.remove(crystal)
+            text = font.render('score: ' + str(score), True, WHITE)
     elif keys[pygame.K_DOWN]:
         player['y'] += player['speed']
         if get_one_colliding_object(player, walls):
             player['y'] -= player['speed']
+        if get_one_colliding_object(player, cry):
+            score = score + 1
+            cry.remove(crystal)
+            text = font.render('score: ' + str(score), True, WHITE)
     
     else:
         # snap player to grid

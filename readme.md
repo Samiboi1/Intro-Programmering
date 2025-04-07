@@ -1,9 +1,13 @@
 Sam Hartelius Loggbok
 ==================
 
+25-04-07
+-------------
+Igen inte jättemycket gjort på denna korta lektion. Jag har bara gjort att man faktiskt kan plocka upp kristallerna och att dem ger poäng
+
 25-03-31
 -------------
-Inte alls snart klar med uppgift 6, har egentligen inte lärt mig jätte mycket idag, mycket bara återanvändning av äldre kod som nu har en betydelse i denna uppgift, till exempel hur man visar en scoreboard
+Inte alls snart klar med uppgift 6, har egentligen inte lärt mig jättemycket idag, mycket bara återanvändning av äldre kod som nu har en betydelse i denna uppgift, till exempel hur man visar en scoreboard
 
 25-03-25
 -------------
