@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-04-08
+-------------
+Idag har jag med hjälp av Rickard fixat att bara en kristall försvinner i taget, den du plockar upp då of course
+
 25-04-07
 -------------
 Igen inte jättemycket gjort på denna korta lektion. Jag har bara gjort att man faktiskt kan plocka upp kristallerna och att dem ger poäng
