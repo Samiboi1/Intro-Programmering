@@ -33,6 +33,10 @@ def get_one_colliding_object(object_1, objects):
             return object_2
     return None
 
+def collides(obj_1_x, obj_1_y, obj_1_radius, obj_2_x, obj_2_y, obj_2_radius):
+    distance_squared = ((obj_1_x - obj_2_x) ** 2 + (obj_1_y - obj_2_y) ** 2)
+    return distance_squared < (obj_1_radius + obj_2_radius) ** 2
+
 # --- Initialize Pygame
 pygame.init()
 
@@ -56,12 +60,7 @@ cry = []
 door_size = door_image.get_width()
 doors = []
 
-enemy = {}
-enemy['x'] = 0
-enemy['y'] = 0
-enemy['image'] = enemy_image
-enemy['speed'] = 2
-enemy_last_direction = "right"
+enemies = []
 
 # Create the player
 player = {}
@@ -77,6 +76,9 @@ font = pygame.font.Font(None, 32)
 text = font.render('score: 0', True, WHITE)
 textRect = text.get_rect()
 textRect.topleft = (75, 5)
+text2 = font.render('', True, WHITE)
+text2Rect = text2.get_rect()
+text2Rect.center = (400 // 2, 400 // 2)
 
 # Read the maze from the file.
 
@@ -105,8 +107,13 @@ while len(line) > 1:
             crystal['image'] = crystal_image
             cry.append(crystal)
         elif char == 't':
-            enemy['x'] = x
-            enemy['y'] = y
+            enemy = {}
+            enemy['x'] = 0
+            enemy['y'] = 0
+            enemy['image'] = enemy_image
+            enemy['speed'] = 4
+            enemy_last_direction = "right"
+            enemies.append(enemy)
         elif char == 'd':
             door = {}
             door['x'] = x
@@ -161,7 +168,12 @@ while is_running:
         player['y'] += player['speed']
         if get_one_colliding_object(player, walls):
             player['y'] -= player['speed']
-    
+
+    for enemy in enemies:
+        if collides(player['x'], player['y'], player_radius, enemy['x'], enemy['y'], enemy_radius):
+            is_running = False
+            text2 = font.render('GAME OVER', True, WHITE)
+
     else:
         # snap player to grid
         player['x'] = round(player['x'] / wall_size) * wall_size
@@ -195,6 +207,8 @@ while is_running:
     screen.blit(enemy_image, (enemy['x'], enemy['y']))
 
     screen.blit(text, textRect)
+
+    screen.blit(text2. text2Rect)
 
     pygame.display.update()  # or pygame.display.flip()
     # --- Increase game time
