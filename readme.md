@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-04-22
+-------------
+Idag har jag inte lyckats med mycket alls, allt jag gjort är att definera enemy och player radius och skapa enemies lista
+
 25-04-08
 -------------
 Idag har jag med hjälp av Rickard fixat att bara en kristall försvinner i taget, den du plockar upp då of course

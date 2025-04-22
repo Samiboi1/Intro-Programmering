@@ -80,8 +80,8 @@ text = font.render('score: 0', True, WHITE)
 textRect = text.get_rect()
 textRect.topleft = (75, 5)
 text2 = font.render('', True, WHITE)
-text2Rect = text2.get_rect()
-text2Rect.center = (400 // 2, 400 // 2)
+textRect2 = text.get_rect()
+textRect2.center = (400 // 2, 400 // 2)
 
 # Read the maze from the file.
 
@@ -211,7 +211,7 @@ while is_running:
 
     screen.blit(text, textRect)
 
-    screen.blit(text2. text2Rect)
+    screen.blit(text2, textRect2)
 
     pygame.display.update()  # or pygame.display.flip()
     # --- Increase game time
