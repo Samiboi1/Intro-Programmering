@@ -62,6 +62,9 @@ doors = []
 
 enemies = []
 
+player_radius = (player_image.get_width() + player_image.get_height())
+enemy_radius = (enemy_image.get_width() + enemy_image.get_height())
+
 # Create the player
 player = {}
 player['x'] = 0
