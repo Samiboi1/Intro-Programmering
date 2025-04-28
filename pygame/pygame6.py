@@ -111,8 +111,8 @@ while len(line) > 1:
             cry.append(crystal)
         elif char == 't':
             enemy = {}
-            enemy['x'] = 0
-            enemy['y'] = 0
+            enemy['x'] = x
+            enemy['y'] = y
             enemy['image'] = enemy_image
             enemy['speed'] = 4
             enemy_last_direction = "right"
