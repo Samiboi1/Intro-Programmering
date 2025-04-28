@@ -180,9 +180,12 @@ while is_running:
         if collides(player['x'], player['y'], player_radius, enemy['x'], enemy['y'], enemy_radius):
             is_running = False
             text2 = font.render('GAME OVER', True, WHITE)
-        enemy['x'] += enemy['speed']
-        if get_one_colliding_object(enemy, walls) or get_one_colliding_object(enemy, doors):
+            enemy['x'] += enemy['speed']
+            if get_one_colliding_object(enemy, walls) or get_one_colliding_object(enemy, doors):
+                enemy['x'] -= enemy['speed']
             enemy['x'] -= enemy['speed']
+            if get_one_colliding_object(enemy, walls) or get_one_colliding_object(enemy, doors):
+                enemy['x'] -= enemy['speed']
         
 
     else:
@@ -212,7 +215,8 @@ while is_running:
     
     screen.blit(player_image, (player['x'], player['y']))
 
-    screen.blit(enemy_image, (enemy['x'], enemy['y']))
+    for enemy in enemies:
+        screen.blit(enemy_image, (enemy['x'], enemy['y']))
 
     screen.blit(text, textRect)
 
