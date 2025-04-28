@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-04-28
+-------------
+Idag har jag uppdaterat kartan, börjat på enemy koden för att dem ska kunna röra sig och fixat att jag inte kan röra mig
+
 25-04-22
 -------------
 Idag har jag inte lyckats med mycket alls, allt jag gjort är att definera enemy och player radius och skapa enemies lista
