@@ -180,6 +180,10 @@ while is_running:
         if collides(player['x'], player['y'], player_radius, enemy['x'], enemy['y'], enemy_radius):
             is_running = False
             text2 = font.render('GAME OVER', True, WHITE)
+        enemy['x'] += enemy['speed']
+        if get_one_colliding_object(enemy, walls) or get_one_colliding_object(enemy, doors):
+            enemy['x'] -= enemy['speed']
+        
 
     else:
         enemy['x'] = round(enemy['x'] / wall_size) * wall_size
