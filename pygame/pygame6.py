@@ -62,8 +62,8 @@ doors = []
 
 enemies = []
 
-player_radius = (player_image.get_width() + player_image.get_height())
-enemy_radius = (enemy_image.get_width() + enemy_image.get_height())
+player_radius = (player_image.get_width() + player_image.get_height()) // 4
+enemy_radius = (enemy_image.get_width() + enemy_image.get_height()) // 4
 
 # Create the player
 player = {}
@@ -171,6 +171,10 @@ while is_running:
         player['y'] += player['speed']
         if get_one_colliding_object(player, walls):
             player['y'] -= player['speed']
+    else:
+        # snap player to grid
+        player['x'] = round(player['x'] / wall_size) * wall_size
+        player['y'] = round(player['y'] / wall_size) * wall_size
 
     for enemy in enemies:
         if collides(player['x'], player['y'], player_radius, enemy['x'], enemy['y'], enemy_radius):
@@ -178,9 +182,6 @@ while is_running:
             text2 = font.render('GAME OVER', True, WHITE)
 
     else:
-        # snap player to grid
-        player['x'] = round(player['x'] / wall_size) * wall_size
-        player['y'] = round(player['y'] / wall_size) * wall_size
         enemy['x'] = round(enemy['x'] / wall_size) * wall_size
         enemy['y'] = round(enemy['y'] / wall_size) * wall_size
 
