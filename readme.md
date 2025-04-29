@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-04-29
+-------------
+Idag var jag tvungen att gå från lektionen tidigt så jag kunde inte hinna starta eller avsluta någonting
+
 25-04-28
 -------------
 Idag har jag uppdaterat kartan, börjat på enemy koden för att dem ska kunna röra sig och fixat att jag inte kan röra mig
