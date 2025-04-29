@@ -186,7 +186,13 @@ while is_running:
             enemy['x'] -= enemy['speed']
             if get_one_colliding_object(enemy, walls) or get_one_colliding_object(enemy, doors):
                 enemy['x'] -= enemy['speed']
-                
+            enemy['y'] += enemy['speed']
+            if get_one_colliding_object(enemy, walls) or get_one_colliding_object(enemy, doors):
+                enemy['y'] -= enemy['speed']
+            enemy['y'] -= enemy['speed']
+            if get_one_colliding_object(enemy, walls) or get_one_colliding_object(enemy, doors):
+                enemy['y'] += enemy['speed']
+
     else:
         enemy['x'] = round(enemy['x'] / wall_size) * wall_size
         enemy['y'] = round(enemy['y'] / wall_size) * wall_size
