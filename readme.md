@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-05-05
+-------------
+Idag har jag pluggat svenska inför prov
+
 25-04-29
 -------------
 Idag var jag tvungen att gå från lektionen tidigt så jag kunde inte hinna starta eller avsluta någonting
