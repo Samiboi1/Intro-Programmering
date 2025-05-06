@@ -20,6 +20,7 @@ Extra tasks:
 2. If the player enters a door, the player is teleported to another door.
 '''
 import pygame
+import random
 
 # --- Define helper functions
 def get_one_colliding_object(object_1, objects):
@@ -82,6 +83,8 @@ textRect.topleft = (75, 5)
 text2 = font.render('', True, WHITE)
 textRect2 = text.get_rect()
 textRect2.center = (400 // 2, 400 // 2)
+
+
 
 # Read the maze from the file.
 
@@ -176,27 +179,33 @@ while is_running:
         player['x'] = round(player['x'] / wall_size) * wall_size
         player['y'] = round(player['y'] / wall_size) * wall_size
 
+    tal = (random.randrange(0, 3))
+
     for enemy in enemies:
         if collides(player['x'], player['y'], player_radius, enemy['x'], enemy['y'], enemy_radius):
             is_running = False
             text2 = font.render('GAME OVER', True, WHITE)
+        if tal == 0:
             enemy['x'] += enemy['speed']
             if get_one_colliding_object(enemy, walls) or get_one_colliding_object(enemy, doors):
                 enemy['x'] -= enemy['speed']
+        if tal == 1:
             enemy['x'] -= enemy['speed']
             if get_one_colliding_object(enemy, walls) or get_one_colliding_object(enemy, doors):
-                enemy['x'] -= enemy['speed']
+                enemy['x'] += enemy['speed']
+        if tal == 2:
             enemy['y'] += enemy['speed']
             if get_one_colliding_object(enemy, walls) or get_one_colliding_object(enemy, doors):
                 enemy['y'] -= enemy['speed']
+        if tal == 3:
             enemy['y'] -= enemy['speed']
             if get_one_colliding_object(enemy, walls) or get_one_colliding_object(enemy, doors):
                 enemy['y'] += enemy['speed']
-
+    '''
     else:
         enemy['x'] = round(enemy['x'] / wall_size) * wall_size
         enemy['y'] = round(enemy['y'] / wall_size) * wall_size
-
+    '''
     crystal = get_one_colliding_object(player, cry)
     if crystal:
         score = score + 1
