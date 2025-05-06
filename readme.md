@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-06-06
+-------------
+Nu kan mina enemies röra sig äntligen, men dem rör sig väldigt konstigt, så det måste fixas nästa vecka. Nu finns det också fler av dem
+
 25-05-05
 -------------
 Idag har jag pluggat svenska inför prov
