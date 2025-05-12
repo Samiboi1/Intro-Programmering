@@ -21,6 +21,7 @@ Extra tasks:
 '''
 import pygame
 import random
+import time
 
 # --- Define helper functions
 def get_one_colliding_object(object_1, objects):
@@ -118,8 +119,9 @@ while len(line) > 1:
             enemy['y'] = y
             enemy['image'] = enemy_image
             enemy['speed'] = 4
-            enemy_last_direction = "right"
             enemies.append(enemy)
+            enemy['direction'] = 0
+            enemy['timer'] = 3
         elif char == 'd':
             door = {}
             door['x'] = x
@@ -179,28 +181,31 @@ while is_running:
         player['x'] = round(player['x'] / wall_size) * wall_size
         player['y'] = round(player['y'] / wall_size) * wall_size
 
-    tal = (random.randrange(0, 3))
-
     for enemy in enemies:
         if collides(player['x'], player['y'], player_radius, enemy['x'], enemy['y'], enemy_radius):
             is_running = False
             text2 = font.render('GAME OVER', True, WHITE)
-        if tal == 0:
+        if enemy['timer'] <= 0:
+            enemy['direction'] = random.randint(0,4)
+            enemy['timer'] = random.randint(2,5)
+        if enemy['direction'] == 1:
             enemy['x'] += enemy['speed']
             if get_one_colliding_object(enemy, walls) or get_one_colliding_object(enemy, doors):
                 enemy['x'] -= enemy['speed']
-        if tal == 1:
+        if enemy['direction'] == 2:
             enemy['x'] -= enemy['speed']
             if get_one_colliding_object(enemy, walls) or get_one_colliding_object(enemy, doors):
                 enemy['x'] += enemy['speed']
-        if tal == 2:
+        if enemy['direction'] == 3:
             enemy['y'] += enemy['speed']
             if get_one_colliding_object(enemy, walls) or get_one_colliding_object(enemy, doors):
                 enemy['y'] -= enemy['speed']
-        if tal == 3:
+        if enemy['direction'] == 4:
             enemy['y'] -= enemy['speed']
             if get_one_colliding_object(enemy, walls) or get_one_colliding_object(enemy, doors):
                 enemy['y'] += enemy['speed']
+
+        enemy['timer'] -= 0.2
     '''
     else:
         enemy['x'] = round(enemy['x'] / wall_size) * wall_size

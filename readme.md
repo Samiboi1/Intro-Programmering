@@ -1,9 +1,13 @@
 Sam Hartelius Loggbok
 ==================
 
-25-06-06
+25-05-12
 -------------
-Nu kan mina enemies röra sig äntligen, men dem rör sig väldigt konstigt, så det måste fixas nästa vecka. Nu finns det också fler av dem
+Idag har jag korrigerat flera stavfel i loggboken, och ändrat så att jag inte loggat för den 6/6, trots att det ännu inte varit. 
+
+25-05-06
+-------------
+Nu kan mina enemies röra sig äntligen, men de rör sig väldigt konstigt, så det måste fixas nästa vecka. Nu finns det också fler av dem.
 
 25-05-05
 -------------
