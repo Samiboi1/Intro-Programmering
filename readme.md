@@ -3,7 +3,7 @@ Sam Hartelius Loggbok
 
 25-05-12
 -------------
-Idag har jag korrigerat flera stavfel i loggboken, och ändrat så att jag inte loggat för den 6/6, trots att det ännu inte varit. 
+Idag blev jag äntligen klar med den sista uppgiften och nu kan mina enemies äntligen röra sig ordentligt tack vare enemy['direction'] och enemy['timer'], båda dessa stal jag av Kevin som var snäll nog att hjälpa mig fatta hur jag kan få dem att röra sig ordentligt
 
 25-05-06
 -------------
