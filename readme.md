@@ -1,6 +1,10 @@
 Sam Hartelius Loggbok
 ==================
 
+25-05-19
+-------------
+När man plockat upp alla kristaller så ser man WINNER WINNER CHICKEN DINNER
+
 25-05-12
 -------------
 Idag blev jag äntligen klar med den sista uppgiften och nu kan mina enemies äntligen röra sig ordentligt tack vare enemy['direction'] och enemy['timer'], båda dessa stal jag av Kevin som var snäll nog att hjälpa mig fatta hur jag kan få dem att röra sig ordentligt.
