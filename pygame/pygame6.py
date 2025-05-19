@@ -216,6 +216,9 @@ while is_running:
         score = score + 1
         cry.remove(crystal)
         text = font.render('score: ' + str(score), True, WHITE)
+    if score == 7:
+        clock.tick(0)
+        text = font.render('WINNER WINNER CHICKEN DINNER', True, WHITE)
 
     # --- Screen-clearing code goes here
     # fill with sand
